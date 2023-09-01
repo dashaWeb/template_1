@@ -1,0 +1,122 @@
+.top-header {
+    background: #000 url(../../img/Transperent-BG.jpg) no-repeat center center;
+
+
+    .line-header {
+        background-color: $line-header;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 3.93%;
+        padding-bottom: 3.77%;
+
+
+        .logo a {
+            @include font($font-regular, 1.5em, $color-light);
+            color: $color-light;
+            font-size: 1.5em;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+
+            span {
+                font-family: $font-bold;
+            }
+
+            span:first-child {
+                @include center;
+                margin-right: 10px;
+            }
+
+            span:last-child {
+                color: $base-color
+            }
+        }
+
+
+        div {
+            color: $color-light;
+            @include center;
+
+            ul {
+                @include center;
+                list-style-type: none;
+
+
+                li {
+                    margin-right: 20px;
+
+                    a {
+                        @include font($font-bold, .9em, $base-color-text);
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        transition: .5s;
+
+                        &:hover {
+                            color: $base-color;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+
+            i {
+                font-size: 22px;
+                color: $base-color-text;
+                display: inline-block;
+                margin-left: 30px;
+            }
+        }
+
+    }
+}
+
+
+.d16 {
+    margin: 20px 0;
+    width: 58px;
+    height: 35px;
+    display: inline-block;
+    background: $base-color;
+    position: relative;
+}
+
+.d16:before,
+.d16:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+}
+
+.d16:before {
+    top: -20px;
+    border-bottom: 20px solid $base-color;
+}
+
+.d16:after {
+    bottom: -20px;
+    border-top: 20px solid $base-color;
+}
+
+@media(max-width:1024px) {
+    .container {
+        width: 1024px;
+    }
+
+    .top-header {
+        .container {
+
+            i {
+                margin-left: 0 !important;
+            }
+        }
+
+    }
+}
